@@ -31,11 +31,47 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btnAdd(View view) {
-        int a = Integer.parseInt(etFirst.getText().toString());
-        int b = Integer.parseInt(etSecond.getText().toString());
-        int c = a+b;
-        tvResult.setText("Result is : "+c);
+        try{
+            int a = Integer.parseInt(etFirst.getText().toString());
+            int b = Integer.parseInt(etSecond.getText().toString());
+            int c = a+b;
+            tvResult.setText(a+"+"+b+" = "+c);
+        }catch (Exception e){
+            tvResult.setText("Something Wrong. ->"+e.getMessage());
+        }
+    }
 
+    public void btnSub(View view) {
+        try{
+            int a = Integer.parseInt(etFirst.getText().toString());
+            int b = Integer.parseInt(etSecond.getText().toString());
+            int c = a-b;
+            tvResult.setText(a+"-"+b+" = "+c);
+        }catch (Exception e){
+            tvResult.setText("Something Wrong. ->"+e.getMessage());
+        }
+
+    }
+    public void btnMult(View view) {
+        try{
+            int a = Integer.parseInt(etFirst.getText().toString());
+            int b = Integer.parseInt(etSecond.getText().toString());
+            int c = a*b;
+            tvResult.setText(a+"*"+b+" = "+c);
+        }catch (Exception e){
+            tvResult.setText("Something Wrong. ->"+e.getMessage());
+        }
+
+    }
+    public void btnDiv(View view) {
+        try{
+            int a = Integer.parseInt(etFirst.getText().toString());
+            int b = Integer.parseInt(etSecond.getText().toString());
+            int c = a/b;
+            tvResult.setText(a+"/"+b+" = "+c);
+        }catch (Exception e){
+            tvResult.setText("Something Wrong. ->"+e.getMessage());
+        }
 
     }
 }
